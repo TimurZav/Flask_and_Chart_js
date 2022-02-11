@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block chart_one_canvas %}
+
+   <div class="col-7">
+      <h1>{{ title }}</h1>
+      <canvas id="line-chart" width="600" height="400"></canvas>
+
+      {% include 'chart_one.html' %}
+    </div>
+{% endblock %}
+
+
+{% block chart_two_canvas %}
+   <div class="col-7">
+      <h1>{{ title_2 }}</h1>
+      <canvas id="line-chart_2" width="600" height="400"></canvas>
+
+      {% include 'chart_two.html' %}
+    </div>
+{% endblock %}
+
+
+{% block chart_three_canvas %}
+   <div class="col-7">
+      <h1>{{ title_3 }}</h1>
+      <canvas id="line-chart_3" width="600" height="400"></canvas>
+
+      {% include 'chart_three.html' %}
+    </div>
+{% endblock %}

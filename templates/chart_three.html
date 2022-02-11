@@ -1,0 +1,26 @@
+<script>
+    new Chart(document.getElementById("line-chart_3"), {
+        type: 'line',
+        data: {
+        labels: [
+                  {% for item in labels_three %}
+                   "{{ item }}",
+                  {% endfor %}
+            ],
+        datasets: [
+            {% for value, column, color in zip %}
+                    {
+                      data: [
+                          {% for item in value %}
+                                "{{ item }}",
+                          {% endfor %}
+                      ],
+                      label: "{{ column }}",
+                      borderColor: "{{ color }}",
+                      fill: true
+                    },
+            {% endfor %}
+        ]
+        }
+    });
+</script>

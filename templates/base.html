@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ title }}</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link href="static/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container-fluid" style="padding-right: 0">
+  <div class="row">
+    {% block chart_one_canvas %}{% endblock %}
+    {% block chart_two_canvas %}{% endblock %}
+    {% block chart_three_canvas %}{% endblock %}
+  </div>
+</div>
+
+</body>
+</html>
